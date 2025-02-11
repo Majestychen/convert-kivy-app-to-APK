@@ -13,7 +13,7 @@ package.domain = org.zipfile
 source.dir = .
 
 # (list) Source files to include (let empty to include all the files)
-source.include_exts = py,png,jpg,kv,atlas,txt
+source.include_exts = py,png,jpg,kv,atlas,txt,ttf
 
 # (list) List of inclusions using pattern matching
 source.include_patterns = images/*.png
@@ -74,7 +74,7 @@ osx.python_version = 3
 #
 
 # (bool) Indicate if the application should be fullscreen or not
-fullscreen = 1
+fullscreen = 0
 
 # (string) Presplash background color (for android toolchain)
 # Supported formats are: #RRGGBB #AARRGGBB or one of the following names:
@@ -95,25 +95,25 @@ fullscreen = 1
 
 # (list) Permissions
 # (See https://python-for-android.readthedocs.io/en/latest/buildoptions/#build-options-1 for all the supported syntaxes and properties)
-android.permissions = INTERNET, WRITE_EXTERNAL_STORAGE, WAKE_LOCK
+android.permissions = INTERNET, WRITE_EXTERNAL_STORAGE, WAKE_LOCK, READ_EXTERNAL_STORAGE
 
 # (list) features (adds uses-feature -tags to manifest)
 #android.features = android.hardware.usb.host
 
 # (int) Target Android API, should be as high as possible.
-android.api = 35
+android.api = 33
 
 # (int) Minimum API your APK / AAB will support.
-#android.minapi = 21
+android.minapi = 21
 
 # (int) Android SDK version to use
-#android.sdk = 20
+android.sdk = 20
 
 # (str) Android NDK version to use
-#android.ndk = 23b
+android.ndk = 23b
 
 # (int) Android NDK API to use. This is the minimum API your app will support, it should usually match android.minapi.
-#android.ndk_api = 21
+android.ndk_api = 21
 
 # (bool) Use --private data storage (True) or --dir public storage (False)
 #android.private_storage = True
@@ -305,7 +305,7 @@ android.allow_backup = True
 # android.no-byte-compile-python = False
 
 # (str) The format used to package the app for release mode (aab or apk or aar).
-android.release_artifact = aab
+android.release_artifact = .apk
 
 # (str) The format used to package the app for debug mode (apk or aar).
 # android.debug_artifact = apk
