@@ -1,13 +1,13 @@
 [app]
 
 # (str) Title of your application
-title = Capitalizer
+title = Zip File
 
 # (str) Package name
-package.name = arjunits
+package.name = zipfile
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = org.arjune
+package.domain = org.zipfile
 
 # (str) Source code where the main.py live
 source.dir = .
@@ -51,7 +51,7 @@ icon.filename = %(source.dir)s/images/icon.png
 
 # (list) Supported orientations
 # Valid options are: landscape, portrait, portrait-reverse or landscape-reverse
-orientation = landscape
+orientation = portrait
 
 # (list) List of service to declare
 #services = NAME:ENTRYPOINT_TO_PY,NAME2:ENTRYPOINT2_TO_PY
@@ -67,7 +67,7 @@ orientation = landscape
 osx.python_version = 3
 
 # Kivy version to use
-osx.kivy_version = 1.9.1
+#osx.kivy_version = 1.9.1
 
 #
 # Android specific
