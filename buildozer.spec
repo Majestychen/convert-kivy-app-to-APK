@@ -13,7 +13,7 @@ package.domain = org.zipfile
 source.dir = .
 
 # (list) Source files to include (let empty to include all the files)
-source.include_exts = py,png,jpg,kv,atlas,txt,ttf
+source.include_exts = py,png,jpg,kv,txt,ttf
 
 # (list) List of inclusions using pattern matching
 source.include_patterns = images/*.png
@@ -37,7 +37,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy,#sdl2_ttf,pillow,kivy-garden,kivymd,openssl,android,requests,pygments,markupsafe,jinja2,pyjnius
-requirements = python3,kivy,android
+requirements = python3,kivy,android,py7zr
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
