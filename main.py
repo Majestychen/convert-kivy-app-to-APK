@@ -22,14 +22,10 @@ class CompressApp(App):
     processed_files = 0
 
     def build(self):
-
-        # 请求 Android 权限
-        self.request_android_permissions()
-        
         self.layout = BoxLayout(orientation='vertical', spacing=10, padding=10)
 
-        self.file_chooser = FileChooserIconView(font_name="simhei.ttf")
-        self.file_chooser.path = self.get_external_storage_path()  # 设置初始路径为外部存储#os.getcwd()
+        self.file_chooser = FileChooserIconView()
+        self.file_chooser.path = os.getcwd()
         self.layout.add_widget(self.file_chooser)
 
         button_layout = BoxLayout(orientation='horizontal', size_hint_y=None, height=40, spacing=10)
@@ -55,20 +51,6 @@ class CompressApp(App):
 
         return self.layout
 
-    def request_android_permissions(self):
-        """请求 Android 读写外部存储权限"""
-        request_permissions([
-            Permission.READ_EXTERNAL_STORAGE,
-            Permission.WRITE_EXTERNAL_STORAGE
-        ])
-
-    def get_external_storage_path(self):
-        """获取 Android 外部存储路径"""
-        if kivy.platform == 'android':
-            return primary_external_storage_path()
-        else:
-            return os.getcwd()
-    
     def show_quit_confirmation_popup(self, instance):
         content = BoxLayout(orientation='vertical')
         message = Label(text="确定要退出吗？", font_name="simhei.ttf")
