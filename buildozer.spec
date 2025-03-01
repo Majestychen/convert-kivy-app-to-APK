@@ -13,7 +13,7 @@ package.domain = org.zipfile
 source.dir = .
 
 # (list) Source files to include (let empty to include all the files)
-source.include_exts = py,png,jpg,kv,atlas,ttf
+source.include_exts = py,ttf
 
 # (list) List of inclusions using pattern matching
 #source.include_patterns = assets/*,images/*.png
@@ -21,14 +21,14 @@ source.include_exts = py,png,jpg,kv,atlas,ttf
 # (list) Source files to exclude (let empty to not exclude anything)
 #source.exclude_exts = spec
 
-# (list) List of directory to exclude (let empty to not exclude anything)
+# (list) List of directory to exclude (let empty to not exclude anything)要排除的目录列表（留空则不排除任何目录）
 source.exclude_dirs = tests, bin, art
 
 # (list) List of exclusions using pattern matching
 #source.exclude_patterns = license,images/*/*.jpg
 
 # (str) Application versioning (method 1)
-version = 0.1
+version = 0.1.2
 
 # (str) Application versioning (method 2)
 # version.regex = __version__ = ['"](.*)['"]
