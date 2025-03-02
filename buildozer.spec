@@ -36,7 +36,7 @@ version = 0.1.3
 
 # (list) Application requirements;py-androidbuild
 # comma seperated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy,zipfile
+requirements = python3,kivy
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
