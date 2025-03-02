@@ -13,7 +13,7 @@ package.domain = org.zipfile
 source.dir = .
 
 # (list) Source files to include (let empty to include all the files)
-source.include_exts = py,ttf
+source.include_exts = py,png,jpg,kv,atlas,ttf,json
 
 # (list) List of inclusions using pattern matching
 #source.include_patterns = assets/*,images/*.png
@@ -28,15 +28,15 @@ source.exclude_dirs = tests, bin, art
 #source.exclude_patterns = license,images/*/*.jpg
 
 # (str) Application versioning (method 1)
-version = 0.1.2
+version = 0.1.3
 
 # (str) Application versioning (method 2)
 # version.regex = __version__ = ['"](.*)['"]
 # version.filename = %(source.dir)s/main.py
 
-# (list) Application requirements
+# (list) Application requirements;py-androidbuild
 # comma seperated e.g. requirements = sqlite3,kivy
-requirements = kivy, android, py7zr
+requirements = python3,kivy,zipfile
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -49,7 +49,7 @@ requirements = kivy, android, py7zr
 #presplash.filename = %(source.dir)s/data/presplash.png
 
 # (str) Icon of the application
-#icon.filename = %(source.dir)s/data/icon.png
+icon.filename = %(source.dir)s/data/images/icon.png
 
 # (str) Supported orientation (one of landscape, portrait or all)
 orientation = portrait
@@ -212,44 +212,7 @@ android.accept_sdk_license = True
 #ios.codesign.release = %(ios.codesign.debug)s
 
 # (list) Permissions
-[app:android.permissions]
-READ_EXTERNAL_STORAGE
-WRITE_EXTERNAL_STORAGE
-ACCESS_LOCATION_EXTRA_COMMANDS
-ACCESS_NETWORK_STATE
-ACCESS_NOTIFICATION_POLICY
-ACCESS_WIFI_STATE
-BLUETOOTH
-BLUETOOTH_ADMIN
-BROADCAST_STICKY
-CHANGE_NETWORK_STATE
-CHANGE_WIFI_MULTICAST_STATE
-CHANGE_WIFI_STATE
-DISABLE_KEYGUARD
-EXPAND_STATUS_BAR
-FOREGROUND_SERVICE
-GET_PACKAGE_SIZE
-INSTALL_SHORTCUT
-INTERNET
-KILL_BACKGROUND_PROCESSES
-MANAGE_OWN_CALLS
-MODIFY_AUDIO_SETTINGS
-NFC
-READ_SYNC_SETTINGS
-READ_SYNC_STATS
-RECEIVE_BOOT_COMPLETED
-REORDER_TASKS
-SET_ALARM
-SET_WALLPAPER
-SET_WALLPAPER_HINTS
-TRANSMIT_IR
-USE_FINGERPRINT
-VIBRATE
-WAKE_LOCK
-WRITE_SYNC_SETTINGS
-
-
-[buildozer]
+android.permissions = WRITE_EXTERNAL_STORAGE, READ_EXTERNAL_STORAGE
 
 # (int) Log level (0 = error only, 1 = info, 2 = debug (with command output))
 log_level = 2
